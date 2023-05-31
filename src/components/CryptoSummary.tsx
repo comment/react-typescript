@@ -1,7 +1,9 @@
-import React from 'react';
+import {Crypto} from "../Types";
 
-const CryptoSummary = (props: any) => {
-    return <p>{props.crypto.name + ' $' + props.crypto.current_price}</p>
+export type AppProps = {
+    crypto: Crypto
+}
+
+export default function CryptoSummary ({crypto}: AppProps) : JSX.Element {
+    return <p>{crypto.name + ' $' + crypto.current_price}</p>
 };
-
-export default CryptoSummary;
